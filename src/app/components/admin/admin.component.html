@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let item of data">
+      <div class="card" style="width: 18rem">
+        <img
+          src="{{ item.image }}"
+          class="card-img-top"
+          alt="Product image"
+          height="300px"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text">{{ item.description }}</p>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-primary">View Details</button>
+            <button class="btn btn-outline-secondary" (click)="delete(item)">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+</div>
